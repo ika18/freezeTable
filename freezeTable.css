@@ -1,0 +1,40 @@
+body {
+	font-family: Arial, Tacoma, sans-serfi;
+	font-size: 75%;
+}
+div.ztable div.fixedTable{
+	float:left;
+	overflow-x: hidden;
+}
+div.ztable div.scrollTable {
+	overflow-x: scroll;
+	float: left;
+}
+
+/*table style start*/
+table {
+	background-color:#ddd;
+}
+
+table thead{
+	background-color:#ccc;
+}
+table tbody {
+	background: #fff;
+}
+table tbody tr:nth-child(odd) {
+	background: #fff;
+}
+table tbody tr:nth-child(even) {
+	background: #eee;
+}
+table thead tr th,
+table tbody tr td {
+	padding: 5px;
+	text-align:center;
+}
+table tbody tr td span {
+	display:block;
+}
+
+/*table style end*/
