@@ -4,11 +4,19 @@
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
 	<script type="text/javascript" src="freezeTable.js"></script>
+	<script type="text/javascript" src="freezeTable_fixedRow.js"></script>
 	<script type="text/javascript">
 		$(function(){
-			$("table.ztable").freezeTable({
+			$("table.fixedColumn").freezeTable({
 				fixedColumn: 3,
 				scrollWidth: 500
+			});
+		});
+
+		$(function(){
+			$("table.fixedRow").freezeTable_fixedRow({
+				fixedRow: 2,
+				scrollHight: 200
 			});
 		});
 	</script>
@@ -20,7 +28,8 @@
 	<p>This is a demo to show how implement a freeze column(s) table with jQuery.</p>
 	<p>And it's used freezeTable jQuery plugin which is made by Ika Wu.</p>
 	<p>Welcome to feedback bugs to wunianzu515#gmail.com (replace '#' with '@').</p>
-	<table class="ztable">
+	<h2>A fixed columns table</h2>
+	<table class="fixedColumn">
 		<thead>
 			<tr>
 				<th>Date/Time</th>
@@ -107,6 +116,157 @@
 				<td><span>GBP</span><span>&pound;123.45</span></td>
 				<td><span>65.43</span><span>&pound;1.23</span></td>
 
+				<td><span>24/12/2011</span><span>19:45</span></td>
+				<td><span>X</span><span>X</span></td>
+				<td><span>23434643</span><span>Chip &amp; PIN</span></td>
+				<td><span>340986043</span><span>Domestic</span></td>
+				<td><span>GBP</span><span>&pound;123.45</span></td>
+				<td><span>65.43</span><span>&pound;1.23</span></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h2>A fixed rows table</h2>
+	<table class="fixedRow">
+		<thead>
+			<tr>
+				<th>Date/Time</th>
+				<th>ID/Description</th>
+				<th>Value/Currency</th>
+				<th><span>Processed</span> <span>Date</span></th>
+				<th><span>TXN status/</span><span>Sub meth</span></th>
+				<th><span>Terminal ID/</span><span>Input mode</span></th>
+				<th><span>Acq ref/</span><span>Interchange cat</span></th>
+				<th><span>Base currency/</span><span>Currency Type</span></th>
+				<th><span>X rate/Assoc.</span> <span>charges</span></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><span>24/12/2011</span><span>16:04</span></td>
+				<td><span>Sale</span><span>23557326734</span></td>
+				<td><span>$125.54</span><span>USD</span></td>
+				<td><span>24/12/2011</span><span>19:45</span></td>
+				<td><span>X</span><span>X</span></td>
+				<td><span>23434643</span><span>Chip &amp; PIN</span></td>
+				<td><span>340986043</span><span>Domestic</span></td>
+				<td><span>GBP</span><span>&pound;123.45</span></td>
+				<td><span>65.43</span><span>&pound;1.23</span></td>
+			</tr>
+			<tr>
+				<td><span>24/12/2011</span><span>16:04</span></td>
+				<td><span>Sale</span><span>23557326734</span></td>
+				<td><span>$125.54</span><span>USD</span></td>
+				<td><span>24/12/2011</span><span>19:45</span></td>
+				<td><span>X</span><span>X</span></td>
+				<td><span>23434643</span><span>Chip &amp; PIN</span></td>
+				<td><span>340986043</span><span>Domestic</span></td>
+				<td><span>GBP</span><span>&pound;123.45</span></td>
+				<td><span>65.43</span><span>&pound;1.23</span></td>
+			</tr>
+			<tr>
+				<td><span>24/12/2011</span><span>16:04</span></td>
+				<td><span>Sale</span><span>23557326734</span></td>
+				<td><span>$125.54</span><span>USD</span></td>
+				<td><span>24/12/2011</span><span>19:45</span></td>
+				<td><span>X</span><span>X</span></td>
+				<td><span>23434643</span><span>Chip &amp; PIN</span></td>
+				<td><span>340986043</span><span>Domestic</span></td>
+				<td><span>GBP</span><span>&pound;123.45</span></td>
+				<td><span>65.43</span><span>&pound;1.23</span></td>
+			</tr>
+			<tr>
+				<td><span>24/12/2011</span><span>16:04</span></td>
+				<td><span>Sale</span><span>23557326734</span></td>
+				<td><span>$125.54</span><span>USD</span></td>
+				<td><span>24/12/2011</span><span>19:45</span></td>
+				<td><span>X</span><span>X</span></td>
+				<td><span>23434643</span><span>Chip &amp; PIN</span></td>
+				<td><span>340986043</span><span>Domestic</span></td>
+				<td><span>GBP</span><span>&pound;123.45</span></td>
+				<td><span>65.43</span><span>&pound;1.23</span></td>
+			</tr>
+			<tr>
+				<td><span>24/12/2011</span><span>16:04</span></td>
+				<td><span>Sale</span><span>23557326734</span></td>
+				<td><span>$125.54</span><span>USD</span></td>
+				<td><span>24/12/2011</span><span>19:45</span></td>
+				<td><span>X</span><span>X</span></td>
+				<td><span>23434643</span><span>Chip &amp; PIN</span></td>
+				<td><span>340986043</span><span>Domestic</span></td>
+				<td><span>GBP</span><span>&pound;123.45</span></td>
+				<td><span>65.43</span><span>&pound;1.23</span></td>
+			</tr>
+			<tr>
+				<td><span>24/12/2011</span><span>16:04</span></td>
+				<td><span>Sale</span><span>23557326734</span></td>
+				<td><span>$125.54</span><span>USD</span></td>
+				<td><span>24/12/2011</span><span>19:45</span></td>
+				<td><span>X</span><span>X</span></td>
+				<td><span>23434643</span><span>Chip &amp; PIN</span></td>
+				<td><span>340986043</span><span>Domestic</span></td>
+				<td><span>GBP</span><span>&pound;123.45</span></td>
+				<td><span>65.43</span><span>&pound;1.23</span></td>
+			</tr>
+			<tr>
+				<td><span>24/12/2011</span><span>16:04</span></td>
+				<td><span>Sale</span><span>23557326734</span></td>
+				<td><span>$125.54</span><span>USD</span></td>
+				<td><span>24/12/2011</span><span>19:45</span></td>
+				<td><span>X</span><span>X</span></td>
+				<td><span>23434643</span><span>Chip &amp; PIN</span></td>
+				<td><span>340986043</span><span>Domestic</span></td>
+				<td><span>GBP</span><span>&pound;123.45</span></td>
+				<td><span>65.43</span><span>&pound;1.23</span></td>
+			</tr>
+			<tr>
+				<td><span>24/12/2011</span><span>16:04</span></td>
+				<td><span>Sale</span><span>23557326734</span></td>
+				<td><span>$125.54</span><span>USD</span></td>
+				<td><span>24/12/2011</span><span>19:45</span></td>
+				<td><span>X</span><span>X</span></td>
+				<td><span>23434643</span><span>Chip &amp; PIN</span></td>
+				<td><span>340986043</span><span>Domestic</span></td>
+				<td><span>GBP</span><span>&pound;123.45</span></td>
+				<td><span>65.43</span><span>&pound;1.23</span></td>
+			</tr>
+			<tr>
+				<td><span>24/12/2011</span><span>16:04</span></td>
+				<td><span>Sale</span><span>23557326734</span></td>
+				<td><span>$125.54</span><span>USD</span></td>
+				<td><span>24/12/2011</span><span>19:45</span></td>
+				<td><span>X</span><span>X</span></td>
+				<td><span>23434643</span><span>Chip &amp; PIN</span></td>
+				<td><span>340986043</span><span>Domestic</span></td>
+				<td><span>GBP</span><span>&pound;123.45</span></td>
+				<td><span>65.43</span><span>&pound;1.23</span></td>
+			</tr>
+			<tr>
+				<td><span>24/12/2011</span><span>16:04</span></td>
+				<td><span>Sale</span><span>23557326734</span></td>
+				<td><span>$125.54</span><span>USD</span></td>
+				<td><span>24/12/2011</span><span>19:45</span></td>
+				<td><span>X</span><span>X</span></td>
+				<td><span>23434643</span><span>Chip &amp; PIN</span></td>
+				<td><span>340986043</span><span>Domestic</span></td>
+				<td><span>GBP</span><span>&pound;123.45</span></td>
+				<td><span>65.43</span><span>&pound;1.23</span></td>
+			</tr>
+			<tr>
+				<td><span>24/12/2011</span><span>16:04</span></td>
+				<td><span>Sale</span><span>23557326734</span></td>
+				<td><span>$125.54</span><span>USD</span></td>
+				<td><span>24/12/2011</span><span>19:45</span></td>
+				<td><span>X</span><span>X</span></td>
+				<td><span>23434643</span><span>Chip &amp; PIN</span></td>
+				<td><span>340986043</span><span>Domestic</span></td>
+				<td><span>GBP</span><span>&pound;123.45</span></td>
+				<td><span>65.43</span><span>&pound;1.23</span></td>
+			</tr>
+			<tr>
+				<td><span>24/12/2011</span><span>16:04</span></td>
+				<td><span>Sale</span><span>23557326734</span></td>
+				<td><span>$125.54</span><span>USD</span></td>
 				<td><span>24/12/2011</span><span>19:45</span></td>
 				<td><span>X</span><span>X</span></td>
 				<td><span>23434643</span><span>Chip &amp; PIN</span></td>
